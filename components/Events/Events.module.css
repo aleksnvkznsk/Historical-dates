@@ -36,6 +36,7 @@
 @media (max-width: 720px) {
   .slide {
     max-width: 200px;
+    margin-bottom: 80px;
   }
   .slide span {
     font-size: 16px;
@@ -45,6 +46,7 @@
   }
   .swiper {
     margin-top: 10px;
+    position: relative;
   }
 }
 
@@ -74,6 +76,12 @@
 @media (max-width: 720px) {
   .swiper :global .swiper-pagination {
     display: block;
+    position: absolute;
+    bottom: 45px;
+  }
+  .swiper :global .swiper-button-prev,
+  .swiper :global .swiper-button-next {
+    display: none;
   }
 }
 
@@ -86,6 +94,18 @@
   font-size: 14px;
   font-weight: 400;
   color: rgba(66, 86, 122, 1);
+}
+
+@media (max-width: 720px) {
+  .events {
+    position: relative;
+  }
+
+  .controls {
+    position: absolute;
+    bottom: 20px;
+    z-index: 100;
+  }
 }
 
 .arrows {
@@ -115,7 +135,7 @@
     margin: 0;
     order: 2;
   }
-  .events{
+  .events {
     display: flex;
     flex-direction: column;
   }
